@@ -1,0 +1,66 @@
+$global-font-icon: 'social';
+@font-face {
+  font-family: $global-font-icon;
+  src:url("../scss/icons/font/myicons.eot");
+  src:url("../scss/icons/font/myicons.?#iefix") format("embedded-opentype"),
+    url("../scss/icons/font/myicons.woff") format("woff"),
+    url("../scss/icons/font/myicons.ttf") format("truetype"),
+    url("../scss/icons/font/myicons.#myicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: $global-font-icon;
+
+  &:before {
+    /* Some common icon stuff */
+  }
+
+  &.icon-contract {
+    &:before {
+      content: $icon-contract;
+    }
+  }
+  &.icon-courthouse {
+    &:before {
+      content: $icon-courthouse;
+    }
+  }
+  &.icon-down-arrow {
+    &:before {
+      content: $icon-down-arrow;
+    }
+  }
+  &.icon-file {
+    &:before {
+      content: $icon-file;
+    }
+  }
+  &.icon-left-quote {
+    &:before {
+      content: $icon-left-quote;
+    }
+  }
+  &.icon-play {
+    &:before {
+      content: $icon-play;
+    }
+  }
+  &.icon-refresh-curve-arrows {
+    &:before {
+      content: $icon-refresh-curve-arrows;
+    }
+  }
+  &.icon-targeting {
+    &:before {
+      content: $icon-targeting;
+    }
+  }
+  &.icon-video {
+    &:before {
+      content: $icon-video;
+    }
+  }
+
+}

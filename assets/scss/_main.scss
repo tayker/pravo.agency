@@ -1,0 +1,21 @@
+.main{
+    background-color: #f5f5f5;
+    
+    .content-wrapper{
+        max-width: 1060px;
+        margin: 0 auto;
+        position: relative;
+        padding: 170px 0 60px 0;
+        
+        .description-text{
+            max-width: 450px;
+            margin-bottom: 24px;
+        }
+    }
+    
+    &-img{
+        position: absolute;
+        bottom: 0px;
+        left: 57%;
+    }
+}

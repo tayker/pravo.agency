@@ -1,0 +1,86 @@
+.header{
+    position: absolute;
+    top: 19px;
+    background-color: #fff;
+    width: 100%;
+    z-index: 99;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    
+    &-content-wrapper{
+        max-width: 1060px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 23px 0 25px 0;
+    }
+    
+    .main-menu{
+        width: 61%;
+        display: flex;
+        justify-content: flex-end;
+        align-self: flex-start;
+        margin-top: 8px;
+    }
+    .language-switch{
+        position: relative;
+        display: block;
+        width: 68px;
+        height: 34px;
+        align-self: center;
+        
+        [type="checkbox"]{
+            display: none;
+        }
+        .checkbox-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fff;
+            transition: $time;
+            border: 2px solid #dfdfe2;
+            border-radius: 50px;
+            
+            &:before {
+                position: absolute;
+                content: "";
+                height: 18px;
+                width: 18px;
+                left: 7px;
+                top: 6px;
+                background-color: #dfdfe2;
+                transition: $time;
+                border-radius: 50%;
+        }   
+            &:after{
+                content: "RU";
+                position: absolute;
+                top: 0px;
+                right: 13px;
+                color: $interactive-color;
+                font-size: 11px;
+                font-weight: 900;
+                line-height: 2.727;
+            }
+}
+        input:checked + .checkbox-slider {
+            background-color: $interactive-color;
+        }
+        input:checked + .checkbox-slider:before {
+            transform: translateX(32px);
+        }
+        input:checked + .checkbox-slider:after{
+                content: "EN";
+                position: absolute;
+                left: 10px;
+                color: #fff;
+                font-size: 11px;
+                font-weight: 900;
+                line-height: 2.727;
+        }
+    }
+}

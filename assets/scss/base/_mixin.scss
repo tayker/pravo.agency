@@ -1,0 +1,43 @@
+
+@mixin clearfix {
+	zoom:1;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+}
+
+//-------------font face--------------------
+@mixin font-face($font-name, $file-name, $font-weight, $font-style) {
+	@font-face {
+		font-family: quote($font-name);
+		src: url('../fonts/'+ $file-name + '.eot');
+		src: url('../fonts/'+ $file-name + '.eot?#iefix')  format('embedded-opentype'),
+					 url('../fonts/'+ $file-name + '.woff') format('woff'),
+					 url('../fonts/'+ $file-name + '.ttf')  format('truetype'),
+					 url('../fonts/'+ $file-name + '.svg##{$font-name}')  format('svg');
+		font-weight: $font-weight;
+		font-style: $font-style;
+	}
+}
+
+//-------------input placeholder---------------------
+@mixin placeholder($color, $font, $text-transform, $font-size, $font-weight){
+	&::-webkit-input-placeholder { color:$color; font-family:$font; text-transform: $text-transform; font-size: $font-size; font-weight: $font-weight;}
+	&::-moz-placeholder { color:$color; font-family:$font; text-transform: $text-transform; font-size: $font-size; font-weight: $font-weight;}
+	&:-ms-input-placeholder { color:$color; font-family:$font; text-transform: $text-transform; font-size: $font-size; font-weight: $font-weight;}
+	&:-moz-placeholder { color:$color; font-family:$font; text-transform: $text-transform; font-size: $font-size; font-weight: $font-weight;}
+}
+
+@mixin columns($count, $gap){
+	-webkit-column-count: $count;
+	-moz-column-count:    $count;
+	column-count:         $count;
+
+	-webkit-column-gap:   $gap;
+	-moz-column-gap:      $gap;
+	column-gap:           $gap;
+}

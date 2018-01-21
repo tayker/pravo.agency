@@ -1,0 +1,124 @@
+.section-reviews{
+    
+    .content-wrapper{
+        max-width: 1090px;
+        margin: auto;
+        text-align: center;
+        
+        .button{
+            position: relative;
+            margin-top: 59px;
+            
+            &-text{
+                color: black;
+                font-weight: bold;
+                font-family: "GothamPro";
+            }
+            
+            .icon:before{
+                display: inline-block;
+                color: $interactive-color;
+                font-weight: bold;
+                transform: rotate(90deg);
+                font-size: 16px;
+                position: absolute;
+                left: -4px;
+                top: 8px;
+                transition: $time*2;
+                backface-visibility: hidden;
+            }
+            
+            &:hover .icon:before{
+                transform: rotate(420deg);
+            }
+        }
+    }
+    .reviews{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 110px;
+        text-align: left;
+        
+        &-item{
+            width: 33%;
+            max-width: 315px;
+            position: relative;
+            
+            .video-review{
+                position: relative;
+                cursor: pointer;
+                transition: $time;
+                margin-bottom: 20px;
+                
+                &:before{
+                    content: " ";
+                    position: absolute;
+                    width: 10px;
+                    height: 12px;
+                    padding: 20px;
+                    border-radius: 50px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #fff url(../icons/play.svg) no-repeat center;
+                    background-size: 10px 12px;
+                }
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+            
+            &:hover .icon{
+                color: $interactive-color;
+                transform: scale(2);
+            }
+            
+            .icon{
+                position: absolute;
+                top: -36px;
+                left: 5px;
+                color: #a5a6a9;
+                font-size: 20px;
+                transition: $time;
+            }
+            .author{
+                
+                &-quote{
+                    border-radius: 50px;
+                    margin-top: 28px;
+                }
+                
+                &-name{
+                    font-size: 13px;
+                    font-weight: bold;
+                    line-height: 1.538;
+                    margin-top: 10px;
+                    margin-bottom: 6px;
+                }
+                
+                &-position{
+                    font-size: 12px;
+                    color: rgb(65, 66, 82);
+                    line-height: 1.667;
+                    text-transform: uppercase;
+                    position: relative;
+                    margin-right: 14px;
+                    
+                    &:after{
+                        content: " ";
+                        position: absolute;
+                        width: 3px;
+                        height: 3px;
+                        background-color: $interactive-color;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+                
+                &-company{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

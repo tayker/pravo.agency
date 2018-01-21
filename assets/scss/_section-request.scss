@@ -1,0 +1,30 @@
+.section-request{
+    border-top: 1px solid #b8b9bb;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    
+    .content-wrapper{
+        max-width: 800px;
+        margin: auto;
+        
+        .button{
+            position: absolute;
+            bottom: 0;
+        }
+        form{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 56px;
+        }
+    }
+    
+    .form{
+        
+        &-first-row, &-second-row{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            max-width: 380px;
+        }
+    }
+}
