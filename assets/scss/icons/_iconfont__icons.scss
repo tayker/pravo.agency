@@ -32,6 +32,11 @@ $global-font-icon: 'social';
       content: $icon-down-arrow;
     }
   }
+  &.icon-facebook {
+    &:before {
+      content: $icon-facebook;
+    }
+  }
   &.icon-file {
     &:before {
       content: $icon-file;
@@ -40,6 +45,11 @@ $global-font-icon: 'social';
   &.icon-left-quote {
     &:before {
       content: $icon-left-quote;
+    }
+  }
+  &.icon-linkedin {
+    &:before {
+      content: $icon-linkedin;
     }
   }
   &.icon-play {
@@ -55,6 +65,11 @@ $global-font-icon: 'social';
   &.icon-targeting {
     &:before {
       content: $icon-targeting;
+    }
+  }
+  &.icon-twitter {
+    &:before {
+      content: $icon-twitter;
     }
   }
   &.icon-video {

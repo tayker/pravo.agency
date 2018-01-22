@@ -74,6 +74,7 @@ body{
     display: inline-block;
     vertical-align: middle;
     border-radius: 50px;
+    transition: $time;
     
     &-more{
         background-color: transparent;
@@ -83,6 +84,15 @@ body{
     }
     &-forward{
         margin-top: 30px;
+        backface-visibility: hidden;
+        
+        &:hover{
+            background-color: #fff;
+            border: 2px solid $interactive-color;
+        }
+        &:hover .button-text{
+            color: $interactive-color;
+        }
     }
     &-icon{
         background: none;
@@ -97,6 +107,7 @@ body{
         top: 49%;
         left: 47.5%;
         transform: translate(-50%, -50%);
+        z-index: 2;
         
         &:hover{
             background-color: $interactive-color;
@@ -153,6 +164,7 @@ body{
         color: #fff;
         text-transform: uppercase;
         line-height: 2.727;
+        transition: $time;
     }
 }
 .link{
@@ -191,13 +203,21 @@ body{
 input{
     border: none;
     border-bottom: 1px solid #dcdcdc;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+    padding: 5px;
 }
-textarea{
+.textarea{
     border: 1px solid #dcdcdc;
     max-width: 380px;
     min-width: 200px;
     max-height: 250px;
     min-height: 100px;
+    height: 100%;
+    
+    &-description{
+        font-size: 11px;
+        text-transform: uppercase;
+        line-height: 1.818;
+    }
 }
 @include placeholder(black, inherit, uppercase, 11px, bold);

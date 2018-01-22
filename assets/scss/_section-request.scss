@@ -1,20 +1,96 @@
 .section-request{
     border-top: 1px solid #b8b9bb;
     margin-top: 50px;
-    margin-bottom: 200px;
+    padding-bottom: 300px;
     
     .content-wrapper{
         max-width: 800px;
         margin: auto;
+        position: relative;
         
         .button{
             position: absolute;
-            bottom: 0;
+            bottom: -250px;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            &:hover{
+                background-color: #fff;
+                border: 2px solid $interactive-color;
+            }
+            &:hover .button-text{
+                color: $interactive-color;
+            }
         }
         form{
             display: flex;
             justify-content: space-between;
-            margin-top: 56px;
+            margin-top: 72px;
+            
+            [type="text"]{
+                
+                &:last-of-type{
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        .selectric{
+            padding: 5px;
+            
+            &-scroll{
+                background-color: #fff;
+            }
+            &-wrapper{
+                position: relative;
+                
+                .icon{
+                    position: absolute;
+                    right: 16px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                    font-size: 12px;
+                    color: #cacbd0;
+                    border: 2px solid #cacbd0;
+                    border-radius: 50px;
+                    width: 22px;
+                    height: 22px;
+                    pointer-events: none;
+                    z-index: 2;
+
+                    &:before{
+                        vertical-align: middle;
+                    }
+                }
+                .button{
+                    display: none;
+                }
+            }
+            &-item{
+                padding-left: 44px;
+                position: relative;
+                background-color: #fff;
+                transition: $time;
+                font-weight: bold;
+                height: 30px;
+                
+                &:hover{
+                    color: $interactive-color;
+                }
+                &:before{
+                    content: " ";
+                    position: absolute;
+                    left: 20px;
+                    transform: translatey( 100%);
+                    width: 3px;
+                    height: 3px;
+                    border: 2px solid $interactive-color;
+                    border-radius: 50px;
+                }
+                &:last-child{
+                    margin-bottom: 20px;
+                }
+            }
         }
     }
     
@@ -25,6 +101,9 @@
             flex-direction: column;
             width: 50%;
             max-width: 380px;
+        }
+        &-first-row{
+            margin-right: 20px;
         }
     }
 }

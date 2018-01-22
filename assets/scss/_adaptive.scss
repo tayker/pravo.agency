@@ -1,0 +1,151 @@
+@media screen and (max-width: 1120px) { 
+    .header, .main, .section{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .main{
+        .button{
+            &-video{
+                left: 55%;
+            }
+        }
+    }
+    .section{
+        &-services{
+            
+            .services{
+                &-item{
+                    &:nth-child(3n-2){
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 980px) { 
+    .main{
+        overflow: hidden;
+        
+        .button{
+            &-video{
+                left: 70%;
+            }
+        }
+        img{
+            left: 70%;
+        }
+    }
+    .section{
+        
+        &-border{
+            display: none;
+        }
+        &-services{
+            
+            .services{
+                max-width: 100%;
+                width: 100%;
+                
+                &-item{
+                    max-width: 100%;
+                    width: 100%;
+                    margin-bottom: 100px;
+                }
+            }
+        }
+        &-reviews{
+            .reviews{
+                flex-direction: column;
+
+                &-item{
+                    max-width: 100%;
+                    width: 100%;
+                    margin: 20px auto;
+                    text-align: center;
+
+                    .video-review{
+                        max-width: 300px;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 778px) { 
+    .main{
+        text-align: center;
+        
+        .title{
+            max-width: 100%;
+            text-align: center;
+            
+            &:after{
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .description-text{
+            margin: auto;
+            max-width: 100px;
+            text-align: center;
+        }
+        img{
+            display: none;
+        }
+        .button{
+            &-video{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) { 
+    .section{
+        &-services{
+            
+            .services{
+                &-item{
+                    margin-right: 20px;
+                    .icon{
+                        
+                        &:after{
+                            transform: translateX(700%);
+                        }
+                    }
+                }
+            }
+        }
+        &-reviews{
+            .title{
+                margin-top: 00px;
+            }
+            .reviews{
+                margin-top: 50px;
+            }
+        }
+        &-request{
+            padding-bottom: 100px;
+            form{
+                flex-direction: column;
+                
+                .button{
+                    top: 105%;
+                }
+                .textarea{
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+            .form{
+                &-first-row, &-second-row{
+                    width: 100%;
+                }
+                &-first-row{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
