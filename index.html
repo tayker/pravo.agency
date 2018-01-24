@@ -15,10 +15,13 @@
             <a href="" class="header-logo">
                 <img src="./assets/img/Logo.png" alt="logo" title="logo">
             </a>
+            <button class="main-menu-btn" id="navBtn">
+                <span class="main-menu-btn-lines"></span>
+            </button>
             <nav class="main-menu" id="nav">
-                <a class="link link-nav" href="#">услуги и цены</a>
-                <a class="link link-nav" href="#">отзывы</a>
-                <a class="link link-nav" href="#">контакты</a>
+                <a class="link link-nav" href="#services">услуги и цены</a>
+                <a class="link link-nav" href="#reviews">отзывы</a>
+                <a class="link link-nav" href="#request">контакты</a>
             </nav>
                 <label class="language-switch">
                   <input type="checkbox">
@@ -49,7 +52,7 @@
                     <!--.main END-->
                     
                     <!--.section--services-->
-    <section class="section section-services">
+    <section class="section section-services" id="services">
         <div class="content-wrapper">
            <div class="section-border"></div>
             <h2 class="title title-section">
@@ -59,7 +62,7 @@
                 <strong class="important-text">Pravo agency</strong> выполняет роль юристов-аутсорсеров, надежно прикрывая <br> правовой тыл нашей деятельности.
             </div>
             <div class="services">
-                <div class="services-item">
+                <div class="services-item" data-service="rt">
                     <div class="icon icon-file"></div>
                     <h3 class="title title-services">
                         наведение порядка <br> в делах
@@ -73,7 +76,7 @@
                         <li class="services-list-item">легализация зависших платежей</li>
                     </ul>
                 </div>
-                <div class="services-item-modal">
+                <div class="services-item-modal" data-modal="rt">
                     <div class="content-wrapper">
                         <h3 class="title title-services">
                             оптимизация <br> договорных отношений
@@ -118,7 +121,7 @@
                         <button class="button"><span class="button-text">заказать</span></button>
                     </div>
                 </div>
-                <div class="services-item">
+                <div class="services-item" data-service="lt">
                     <div class="icon icon-targeting"></div>
                     <h3 class="title title-services">
                         оптимизация <br> договорных отношений
@@ -129,7 +132,52 @@
                         <li class="services-list-item">Составление договоров, соглашений о конфиденциальности, публичных офферт</li>
                     </ul>
                 </div>
-                <div class="services-item">
+                <div class="services-item-modal "data-modal="lt">
+                    <div class="content-wrapper">
+                        <h3 class="title title-services">
+                            оптимизация <br> договорных отношений
+                        </h3>
+                        <div class="description-text">услуга</div>
+                        <p class="secondary-text">Борьба внутри меня, и я был в самых разных ситуациях в моей жизни. <strong class="important-text">Таким образом, борьба, что у меня на постоянной основе, это просто пробовать и быть лучше.</strong></p>
+                        <p class="secondary-text">
+                            Есть определенная разница между публичным человеком и обычным человеком, это как сойти с ума - для меня во всяком случае - открыть себя целиком для всего мира.
+                        </p>
+                        <div class="prices">
+                            <div class="description-text">
+                                цена
+                            </div>
+                            <div class="prices-item">
+                                <div class="secondary-text">
+                                    <strong class="important-text">&#60; 50</strong> <br>
+                                    Сотрудников
+                                </div>
+                                <div class="secondary-text">
+                                    от <strong class="important-text">5000 грн.</strong>
+                                </div>
+                            </div>
+                            <div class="prices-item">
+                                <div class="secondary-text">
+                                    <strong class="important-text">50-100</strong> <br>
+                                    Сотрудников
+                                </div>
+                                <div class="secondary-text">
+                                    от <strong class="important-text">15000 грн.</strong>
+                                </div>
+                            </div>
+                            <div class="prices-item">
+                                <div class="secondary-text">
+                                    <strong class="important-text">&#62; 100</strong> <br>
+                                    Сотрудников
+                                </div>
+                                <div class="secondary-text">
+                                    от <strong class="important-text">25000 грн.</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button"><span class="button-text">заказать</span></button>
+                    </div>
+                </div>
+                <div class="services-item" data-service="rb">
                     <div class="icon icon-contract"></div>
                     <h3 class="title title-services">
                         правовое сопровождение <br> деятельности (юрист-аутсорсер)
@@ -141,7 +189,52 @@
                         <li class="services-list-item">Представительство интересов в судах</li>
                     </ul>
                 </div>
-                <div class="services-item">
+                <div class="services-item-modal "data-modal="rb">
+                    <div class="content-wrapper">
+                        <h3 class="title title-services">
+                            оптимизация <br> договорных отношений
+                        </h3>
+                        <div class="description-text">услуга</div>
+                        <p class="secondary-text">Борьба внутри меня, и я был в самых разных ситуациях в моей жизни. <strong class="important-text">Таким образом, борьба, что у меня на постоянной основе, это просто пробовать и быть лучше.</strong></p>
+                        <p class="secondary-text">
+                            Есть определенная разница между публичным человеком и обычным человеком, это как сойти с ума - для меня во всяком случае - открыть себя целиком для всего мира.
+                        </p>
+                        <div class="prices">
+                            <div class="description-text">
+                                цена
+                            </div>
+                            <div class="prices-item">
+                                <div class="secondary-text">
+                                    <strong class="important-text">&#60; 50</strong> <br>
+                                    Сотрудников
+                                </div>
+                                <div class="secondary-text">
+                                    от <strong class="important-text">5000 грн.</strong>
+                                </div>
+                            </div>
+                            <div class="prices-item">
+                                <div class="secondary-text">
+                                    <strong class="important-text">50-100</strong> <br>
+                                    Сотрудников
+                                </div>
+                                <div class="secondary-text">
+                                    от <strong class="important-text">15000 грн.</strong>
+                                </div>
+                            </div>
+                            <div class="prices-item">
+                                <div class="secondary-text">
+                                    <strong class="important-text">&#62; 100</strong> <br>
+                                    Сотрудников
+                                </div>
+                                <div class="secondary-text">
+                                    от <strong class="important-text">25000 грн.</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button"><span class="button-text">заказать</span></button>
+                    </div>
+                </div>
+                <div class="services-item" data-service="lb">
                     <div class="icon icon-courthouse"></div>
                     <h3 class="title title-services">
                         разработка договоров <br> и другой документации
@@ -150,13 +243,58 @@
                         К сожалению, конфликты бывают в любой сфере. Если дело близится к суду или уже дошло до него, мы поможем отстоять ваши права и интересы.
                     </span>
                 </div>
+                <div class="services-item-modal "data-modal="lb">
+                    <div class="content-wrapper">
+                        <h3 class="title title-services">
+                            оптимизация <br> договорных отношений
+                        </h3>
+                        <div class="description-text">услуга</div>
+                        <p class="secondary-text">Борьба внутри меня, и я был в самых разных ситуациях в моей жизни. <strong class="important-text">Таким образом, борьба, что у меня на постоянной основе, это просто пробовать и быть лучше.</strong></p>
+                        <p class="secondary-text">
+                            Есть определенная разница между публичным человеком и обычным человеком, это как сойти с ума - для меня во всяком случае - открыть себя целиком для всего мира.
+                        </p>
+                        <div class="prices">
+                            <div class="description-text">
+                                цена
+                            </div>
+                            <div class="prices-item">
+                                <div class="secondary-text">
+                                    <strong class="important-text">&#60; 50</strong> <br>
+                                    Сотрудников
+                                </div>
+                                <div class="secondary-text">
+                                    от <strong class="important-text">5000 грн.</strong>
+                                </div>
+                            </div>
+                            <div class="prices-item">
+                                <div class="secondary-text">
+                                    <strong class="important-text">50-100</strong> <br>
+                                    Сотрудников
+                                </div>
+                                <div class="secondary-text">
+                                    от <strong class="important-text">15000 грн.</strong>
+                                </div>
+                            </div>
+                            <div class="prices-item">
+                                <div class="secondary-text">
+                                    <strong class="important-text">&#62; 100</strong> <br>
+                                    Сотрудников
+                                </div>
+                                <div class="secondary-text">
+                                    от <strong class="important-text">25000 грн.</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button"><span class="button-text">заказать</span></button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
                     <!--.section--services END-->
                     
                     <!--.section--reviews-->
-    <section class="section section-reviews">
+    <section class="section section-reviews" id="reviews">
         <div class="content-wrapper">
             <h2 class="title title-section">
                 отзывы
@@ -220,7 +358,7 @@
         </div>
     </section>
                     <!--.section--request-->
-    <section class="section section-request">
+    <section class="section section-request" id="request">
         <div class="content-wrapper">
             <h2 class="title title-section">
                 запрос на услуги
@@ -289,8 +427,6 @@
                     <!--.footer END-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="assets/js/selectric/jquery.selectric.min.js"></script>
-    <script>
-        $('.selectric').selectric();
-    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

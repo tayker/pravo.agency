@@ -1,12 +1,17 @@
 .header{
     position: absolute;
     top: 19px;
-    background-color: #fff;
     width: 100%;
     z-index: 99;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
     
+    &.fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        border-top: 1px solid #e7e7e7;
+        border-bottom: 1px solid #e7e7e7;
+    }
     &-content-wrapper{
         max-width: 1060px;
         margin: auto;
@@ -22,6 +27,43 @@
         justify-content: flex-end;
         align-self: flex-start;
         margin-top: 8px;
+        
+        &-btn{
+            background: none;
+            border: none;
+            padding: 20px;
+            cursor: pointer;
+            display: none;
+            position: relative;
+            
+            &-lines{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 30px;
+                height: 3px;
+                border: none;
+                background-color: $interactive-color;
+                right: 150px;
+                cursor: pointer;
+
+                &:before, &:after{
+                    content: " ";
+                    position: absolute;
+                    width: 30px;
+                    height: 3px;
+                    background-color: $interactive-color;
+                    left: 0;
+                }
+                &:before{
+                    top: -10px;
+                }
+                &:after{
+                    bottom: -10px;
+                }
+            }
+        }
     }
     .language-switch{
         position: relative;

@@ -10,31 +10,143 @@
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 122px 0 0 0;
+        position: relative;
         
-        
-        &:before{
-            content: " ";
-            position: absolute;
-            left: 0;
-            top: 150px;
-            width: 100%;
-            height: 1px;
-            background-color: #f5f5f5;
-        }
-        
+
         &-item{
             max-width: 455px;
             padding: 0 0 0 70px;
             position: relative;
             width: 50%;
+            cursor: pointer;
+            
+            &:hover .icon{
+                color: $interactive-color;
+            }
+            &:hover .icon:after{
+                background-color: $interactive-color;
+                color: #fff;
+            }
             
             &-modal{
-                position: relative;
-                margin-left: 200px;
+                position: absolute;
                 z-index: 5;
                 max-width: 550px;
+                padding-bottom: 20px;
                 display: none;
+                background-color: #fff;
                 
+                &.active{
+                    display: block;
+                }
+                &[data-modal="lt"]{
+                    left: -10px;
+                    top: 100px;
+                    padding-right: 50px;
+                    &:after, &:before{
+                        content: " ";
+                        position: absolute;
+                    }
+                    &:after{
+                        width: 1px;
+                        height: 200px;
+                        right: -40px;
+                        top: 0;
+                        background-color: $interactive-color;
+                    }
+                    &:before{
+                        width: 8px;
+                        height: 8px;
+                        transform: rotate(45deg);
+                        border-top: 1px solid $interactive-color;
+                        border-right: 1px solid $interactive-color;
+                        right: -44px;
+                        top: 40px;
+                        background-color: #fff;
+                        z-index: 2;
+                    }
+                }
+                &[data-modal="rt"]{
+                    right: -10px;
+                    top: 100px;
+                    padding-right: 50px;
+                    &:after, &:before{
+                        content: " ";
+                        position: absolute;
+                    }
+                    &:after{
+                        width: 1px;
+                        height: 200px;
+                        left: -40px;
+                        top: 0;
+                        background-color: $interactive-color;
+                    }
+                    &:before{
+                        width: 8px;
+                        height: 8px;
+                        transform: rotate(45deg);
+                        border-bottom: 1px solid $interactive-color;
+                        border-left: 1px solid $interactive-color;
+                        left: -44px;
+                        top: 40px;
+                        background-color: #fff;
+                        z-index: 2;
+                    }
+                }
+                &[data-modal="rb"]{
+                    right: -10px;
+                    top: 100px;
+                    padding-right: 50px;
+                    &:after, &:before{
+                        content: " ";
+                        position: absolute;
+                    }
+                    &:after{
+                        width: 1px;
+                        height: 200px;
+                        left: -40px;
+                        top: 250px;
+                        background-color: $interactive-color;
+                    }
+                    &:before{
+                        width: 8px;
+                        height: 8px;
+                        transform: rotate(45deg);
+                        border-bottom: 1px solid $interactive-color;
+                        border-left: 1px solid $interactive-color;
+                        left: -44px;
+                        top: 290px;
+                        background-color: #fff;
+                        z-index: 2;
+                    }
+                }
+                &[data-modal="lb"]{
+                    left: -10px;
+                    top: 100px;
+                    padding-right: 50px;
+                    &:after, &:before{
+                        content: " ";
+                        position: absolute;
+                    }
+                    &:after{
+                        width: 1px;
+                        height: 200px;
+                        right: -40px;
+                        top: 250px;
+                        background-color: $interactive-color;
+                    }
+                    &:before{
+                        width: 8px;
+                        height: 8px;
+                        transform: rotate(45deg);
+                        border-top: 1px solid $interactive-color;
+                        border-right: 1px solid $interactive-color;
+                        right: -44px;
+                        top: 290px;
+                        background-color: #fff;
+                        z-index: 2;
+                    }
+                }
                 .title{
                     margin-bottom: 24px;    
                 }
@@ -105,15 +217,6 @@
                 cursor: pointer;
                 padding: 0 5px;
                 transition: $time;
-                
-                &:hover{
-                    color: $interactive-color;
-                    
-                    &:after{
-                        background-color: $interactive-color;
-                        color: #fff;
-                    }
-                }
                 
                 &:after{
                     content: "i";
