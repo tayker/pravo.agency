@@ -205,6 +205,11 @@ input{
     border-bottom: 1px solid #dcdcdc;
     margin-bottom: 24px;
     padding: 5px;
+    transition: $time;
+    
+    &:focus{
+        border-color: $interactive-color;
+    }
 }
 .textarea{
     border: 1px solid #dcdcdc;
@@ -213,6 +218,11 @@ input{
     max-height: 250px;
     min-height: 100px;
     height: 100%;
+    transition: $time;
+    padding: 5px;
+    &:focus{
+        border-color: $interactive-color;
+    }
     
     &-description{
         font-size: 11px;
